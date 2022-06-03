@@ -1,11 +1,12 @@
 :root {
     --strong-purpura : #5d3bef;
-    --medium-purpura : #be7bef;
+    --medium-purpura : #8e7bef;
     --light-purpura : #f9f6ff;
     --negro : #222222;
     --gris : #423f40;
     --blanco : #ffffff;
     --crema : #f9f5f2;
+    --fuente: 'Montserrat', sans-serif;
 }
 * {
     padding: 0;
@@ -22,12 +23,19 @@ html {
 }
 body {
     font-size: 1.6rem;
+    font-family: var(--fuente);
 }
 img {
     width: 100%;
 }
 p {
     font-size: 1.6rem;
+}
+h1 {
+    font-size: 5rem;
+}
+h2 {
+    font-size: 2.4rem;
 }
 .container {
     width: min(90%, 120rem);
@@ -37,33 +45,72 @@ p {
     font-size: 2.4rem;
 }
 
-.nav-bar-items {
+.menu {
     display: flex;
-    margin-top: 1rem;
-    flex-direction: column;
-    gap: 1rem;
+    justify-content: center;
+    position: relative;
+    height: 6rem;
+    background-color: var(--blanco);
 }
 .nav-bar {
     display: flex;
     justify-content: center;
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    
+}
+.nav-bar .nav-bar-items {
+    display: flex;
+    background-color: var(--strong-purpura);
+    
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+.nav-bar-items.menu-active {
+    display: none;
+}
+.nav-bar-items .nav-bar-item {
+    margin: 1rem 0;
+}
+.nav-bar-items .nav-bar-item .nav-bar-item-link{
+    color: var(--blanco);
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem 2rem;
+}
+.nav-bar-items .nav-bar-item .nav-bar-item-link:hover {
+    transition: all 0.3s ease-in-out;
+    background-color: var(--blanco);
+    color: var(--strong-purpura);
 }
 .box {
-    justify-content: flex-end;
+    position: absolute;
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
     
 }
 .box .icon {
     position: relative;
     margin-top: 1rem;
-    right: -10rem;
     width: 3rem;
     height: 3rem;
     border: 1px solid rgba(0, 0, 0, 0.3);
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.3s ease;
+    background-color: var(--strong-purpura);
+    color: var(--blanco);
+    
 }
 .box .icon.active {
-    background: var(--strong-purpura);
+    background: var(--blanco);
 }
 .box .icon i {
     position: absolute;
@@ -73,9 +120,10 @@ p {
     transform: translate(-50%, -50%);
     pointer-events: none;
     transition: all 0.3s ease;
+    z-index: 4;
 }
 .box .icon.active i{
-    color: var(--blanco);
+    color: var(--strong-purpura);
 }
 .box .icon.active i.open {
     opacity: 0;
@@ -89,7 +137,132 @@ p {
     transform: translate(-50%, -50%) rotate(180deg);
 }
 
-
+/*MAIN*/
 .presentation {
     text-align: center;
+}
+.container-icono-foto {
+    position: relative;
+    z-index: -1;
+}
+.iconos-container {
+    display: flex;
+    bottom: -4rem;
+    gap: 4rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-around;
+    position: absolute;
+}
+.icono-items {
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--medium-purpura);
+    padding: 1rem;
+    border-radius: 50%;
+    
+}
+.icono {
+    color: var(--blanco);
+    fill: var(--blanco);
+}
+.btn-primary {
+    width: 100%;
+    margin: 4.5rem 0 1rem;
+    padding: 1.5rem 0;
+    background-color: var(--strong-purpura);
+    border-style: none;
+    color: var(--blanco);
+    font-size: 1.8rem;
+}
+.aboutMe-container h2{
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 2rem;
+}
+.aboutMe-container p {
+    text-align: left;
+    padding: 0 0 1rem;
+    margin-bottom: 2rem;
+}
+section h2, h3{
+    text-align: center;
+}
+section p {
+    text-align: left;
+}
+section h3 {
+    font-size: 1.6rem;
+}
+.habilities {
+    margin: 4rem 0;
+}
+.habilities-item {
+    background-color: var(--light-purpura);
+    margin: .5rem .5rem;
+}
+.habilities-item-content-text > p{
+    font-size: 1.2rem;
+}
+.habilities-item-content-text > h3 {
+    font-size: 1.4rem;
+}
+.habilities-items {
+    display: flex;
+}
+.habilities-items .habilities-item-content {
+    display: flex;
+}
+.icono-habilities-container {
+    width: 6rem;
+}
+.experience-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.experience-icono {
+    background-color: white;
+}
+.icono-amazon {
+    width: 11.5rem;
+}
+.portafolio {
+    margin: 4rem 0;
+}
+.portafolio-title {
+    padding: 3rem 0;
+}
+.contact {
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    margin-bottom: 4rem;
+}
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-content {
+    text-align: center;
+}
+.contact-content > p{
+    font-size: 1.2rem;
+}
+.icono-contact {
+    position: relative;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    background-color: var(--crema);
+    text-align: center;
+}
+.icono-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 5rem;
 }

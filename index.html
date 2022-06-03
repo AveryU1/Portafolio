@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/styles.css">
-    <link rel="stylesheet" href="./assets/styles/normalize.css">
+    <!-- <link rel="stylesheet" href="./assets/styles/normalize.css"> -->
     <title>Document</title>
 </head>
 
@@ -15,24 +18,21 @@
     <header>
         <div class="menu">
             <nav class="nav-bar">
-                <ul class="nav-bar-items">
+                <ul class="nav-bar-items menu-active">
                     <li class="nav-bar-item"><a class="nav-bar-item-link" href="#">Home</a></li>
                     <li class="nav-bar-item"><a class="nav-bar-item-link" href="#">Acerca de mi</a></li>
                     <li class="nav-bar-item"><a class="nav-bar-item-link" href="#">Mis habilidades</a></li>
                     <li class="nav-bar-item"><a class="nav-bar-item-link" href="#">Experiencia</a></li>
                     <li class="nav-bar-item"><a class="nav-bar-item-link" href="#">Portafolio</a></li>
                     <li class="nav-bar-item"><a class="nav-bar-item-link" href="#">Contacto</a></li>
-
                 </ul>
-                <div class="box">
-                    <div class="icon">
-                        <i class='bx bx-menu open'></i>
-                        <i class='bx bx-x closed'></i>
-                    </div>
-                </div>
-
             </nav>
-
+            <div class="box">
+                <div class="icon">
+                    <i class='bx bx-menu open'></i>
+                    <i class='bx bx-x closed'></i>
+                </div>
+            </div>
         </div>
     </header>
     <main>
@@ -45,17 +45,22 @@
                 <div class="mi-foto">
                     <img src="./assets/images/img-removebg-preview 2.png" alt="Foto del desarrollador">
                 </div>
-                <div class="iconos-foto-container">
-                    <img class="icono-foto" src="./assets/iconos/cib_linkedin-in.svg" alt="Icono de linkedin">
-                    <img class="icono-foto" src="./assets/iconos/ant-design_instagram-filled.svg"
-                        alt="Icono de Instagram">
-                    <img class="icono-foto" src="./assets/iconos/ant-design_twitter-outlined.svg"
-                        alt="Icono de twitter">
-                </div>
+                <article class="iconos-container">
+                    <div class="icono-items">
+                        <img class="icono" src="./assets/iconos/cib_linkedin-in.svg" alt="Icono de linkedin">
+                    </div>
+                    <div class="icono-items">
+                        <img class="icono" src="./assets/iconos/ant-design_instagram-filled.svg"
+                            alt="Icono de Instagram">
+                    </div>
+                    <div class="icono-items">
+                        <img class="icono" src="./assets/iconos/ant-design_twitter-outlined.svg" alt="Icono de twitter">
+                    </div>
+                </article>
 
             </section>
-            <div class="btn">
-                <button>Contáctame</button>
+            <div class="btn-container">
+                <button class="btn btn-primary">Contáctame</button>
             </div>
             <section class="aboutMe-container">
                 <h2>Acerca de mi</h2>
@@ -69,23 +74,42 @@
                 <h2>Mis habilidades</h2>
             </article>
             <article class="habilities-items">
-                <div class="habilities-item-1">
-                    <div class="habilities-item-title">
-                        <span><img src="./assets/iconos/layer1.svg" alt="Icono de un bombillo"></span>
-                        <h3>Web Developer</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere sequi, alias doloribus,
-                            necessitatibus voluptatum optio quod, consectetur dolores ea aliquam doloremque recusandae
-                            eius quo deserunt nam earum rerum? Vero, autem?</p>
+                <div class="habilities-item">
+                    <div class="habilities-item-content">
+                        <div class="icono-habilities">
+                            <img class="icono-habilities" src="./assets/iconos/layer1.svg" alt="Icono de un bombillo">
+                        </div>
+                        <div class="habilities-item-content-text">
+                            <h3>Web Developer</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere sequi, alias doloribus,
+                                necessitatibus </p>
+                        </div>
                     </div>
                 </div>
-                <div class="habilities-item-2">
-                    <div class="habilities-item-title">
-                        <span><img src="./assets/iconos/Group 95.svg" alt="Icono de una regla"></span>
-                        <h3>UX-UI Designer</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere sequi, alias doloribus,
-                            necessitatibus voluptatum optio quod, consectetur dolores ea aliquam doloremque recusandae
-                            eius quo deserunt nam earum rerum? Vero, autem?</p>
+                <div class="habilities-item">
+                    <div class="habilities-item-content">
+                        <div class="icono-habilities">
+                            <img class="icono-habilities" src="./assets/iconos/Group 95.svg" alt="Icono de una regla">
+                        </div>
+                        <div class="habilities-item-content-text">
+                            <h3>UX-UI Designer</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere sequi, alias doloribus,
+                                necessitatibus </p>
+                        </div>
                     </div>
+                </div>
+                <div class="habilities-item">
+                    <div class="habilities-item-content">
+                        <div class="icono-habilities">
+                            <img src="./assets/iconos/smartphonetablet-115830_115799 1.svg" alt="Icono de una regla">
+                        </div>
+                        <div class="habilities-item-content-text">
+                            <h3>Interactive Designe</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere sequi, alias doloribus,
+                                necessitatibus</p>
+                        </div>
+                    </div>
+
                 </div>
             </article>
         </section>
@@ -96,8 +120,11 @@
                         Experiencia
                     </h2>
                 </article>
-                <article>
-                    <div><img src="./assets/iconos/ant-design_amazon-outlined.svg" alt="Icono de Amazon"></div>
+                <article class="experience-container">
+                    <div class="icono-amazon">
+                        <img class="experience-icono" src="./assets/iconos/ant-design_amazon-outlined.svg"
+                            alt="Icono de Amazon">
+                    </div>
                     <div>
                         <h3>Amazon</h3>
                         <p>Web Developer</p>
@@ -107,8 +134,10 @@
                         <h3>2 años</h3>
                     </div>
                 </article>
-                <article>
-                    <div><img src="./assets/iconos/bi_spotify.svg" alt="Icono de spotify"></div>
+                <article class="experience-container">
+                    <div>
+                        <img class="experience-icono" src="./assets/iconos/bi_spotify.svg" alt="Icono de spotify">
+                    </div>
                     <div>
                         <h3>Spotify</h3>
                         <p>Web Developer</p>
@@ -118,8 +147,11 @@
                         <h3>2 años</h3>
                     </div>
                 </article>
-                <article>
-                    <div><img src="./assets/iconos/akar-icons_google-fill.svg" alt="Icono de Google"></div>
+                <article class="experience-container">
+                    <div>
+                        <img class="experience-icono" src="./assets/iconos/akar-icons_google-fill.svg"
+                            alt="Icono de Google">
+                    </div>
                     <div>
                         <h3>Spotify</h3>
                         <p>Web Developer</p>
@@ -131,6 +163,9 @@
                 </article>
             </section>
             <section class="portafolio">
+                <article class="portafolio-title">
+                    <h2>Portafolio</h2>
+                </article>
                 <div><img src="./assets/images/Rectangle 59.jpg" alt=""></div>
                 <div><img src="./assets/images/image 3.jpg" alt=""></div>
                 <div class="container-rectangle">
@@ -138,17 +173,23 @@
                     <div><img src="./assets/images/Rectangle 49.jpg" alt=""></div>
                 </div>
             </section>
-            <section class="contacto">
-                <article>
-                    <div><img src="./assets/iconos/phone 3.svg" alt=""></div>
-                    <div>
+            <h2>Contácto</h2>
+            <section class="contact">
+                <article class="contact-container">
+                    <div class="icono-contact">
+                        <img class="icono-content" src="./assets/iconos/phone 3.svg" alt="">
+                    </div>
+                    <div class="contact-content">
                         <h4>Phone number</h4>
                         <p>+593-980948897</p>
                     </div>
                 </article>
-                <article>
-                    <div><img src="./assets/iconos/mail 3.svg" alt=""></div>
-                    <div>
+                <article class="contact-container">
+                    <div class="icono-contact">
+                        <img class="icono-content" src="./assets/iconos/mail 3.svg" alt="">
+                    </div>
+                    <div class="contact-content">
+                        <h4>Email</h4>
                         <p>
                             criss_19992016@outlook.com
                         </p>
