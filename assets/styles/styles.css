@@ -37,6 +37,9 @@ h1 {
 h2 {
     font-size: 2.4rem;
 }
+h4 {
+    font-size: 1.4rem;
+}
 .container {
     width: min(90%, 120rem);
     margin: 0 auto;
@@ -44,39 +47,37 @@ h2 {
 .icon > i {
     font-size: 2.4rem;
 }
-header {
+.nav-bar {
+    /* display: flex;
+    justify-content: center;
+    width: 100%;
+    position: absolute; */
     background-color: var(--crema);
     position: fixed;
     top: 0;
     width: 100%;
     height: 10rem;
 }
-.menu {
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-.nav-bar {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    position: absolute;
-    
-}
 .nav-bar .nav-bar-items {
     display: flex;
     background-color: var(--strong-purpura);
     position: fixed;
     width: 100%;
-    height: 100vh;
     flex-direction: column;
     gap: 2rem;
     align-items: center;
     justify-content: center;
     display: none;
+    opacity: 0;
+}
+@keyframes muestraMenu {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
 .nav-bar-items.menu-active {
     display: flex;
+    height: 100vh;
+    animation: muestraMenu 200ms ease-in-out both;
 }
 .nav-bar-items .nav-bar-item {
     margin: 1rem 0;
@@ -99,7 +100,7 @@ header {
 }
 .box .icon {
     position: relative;
-    margin-top: 1rem;
+    margin-top: 2rem;
     width: 3rem;
     height: 3rem;
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -162,6 +163,9 @@ header {
     padding: 1rem;
     border-radius: 50%;
 }
+.icono {
+    filter: invert(97%) sepia(100%) saturate(4985%) hue-rotate(181deg) brightness(109%) contrast(108%);
+}
 .btn-primary {
     width: 100%;
     margin: 4.5rem 0 1rem;
@@ -170,6 +174,9 @@ header {
     border-style: none;
     color: var(--blanco);
     font-size: 1.8rem;
+}
+.btn-primary:hover {
+    cursor: pointer;
 }
 .aboutMe-container h2{
     text-align: center;
@@ -190,6 +197,7 @@ section p {
 section h3 {
     font-size: 1.6rem;
 }
+/*Habilities*/
 .habilities {
     margin: 4rem 0;
 }
@@ -215,34 +223,61 @@ section h3 {
 .icono-habilities-container {
     width: 6rem;
 }
+/*Experiences*/
 .experience-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
+
 .experience-icono {
-    background-color: white;
+    position:relative;
+    z-index: -1;
+    filter: invert(67%) sepia(82%) saturate(4465%) hue-rotate(219deg) brightness(98%) contrast(90%);
 }
 .icono-amazon {
     width: 11.5rem;
 }
+.experience-icono-container {
+    width: 8rem;
+}
+/*Portafolio*/
 .portafolio {
-    margin: 4rem 0;
+    margin: 2rem 0;
 }
 .portafolio-title {
     padding: 3rem 0;
 }
+div.experience-text p {
+    font-size: 1.4rem;
+}
+.container-rectangle {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+.portafolio-rectangle-2 {
+    padding-top: 2rem;
+}
+/*Contacto*/
 .contact {
     display: flex;
     justify-content: space-between;
     gap: 4rem;
     margin-bottom: 4rem;
+    position: relative;
+    z-index: -1;
+}
+.contact-title {
+    padding: 2rem 0;
 }
 .contact-container {
     display: flex;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    gap: 1rem;
 }
 .contact-content {
     text-align: center;
@@ -264,4 +299,7 @@ section h3 {
     left: 50%;
     transform: translate(-50%, -50%);
     width: 5rem;
+}
+section > span > img {
+    width: 2.4rem;
 }
