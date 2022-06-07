@@ -5,3 +5,8 @@ icon.addEventListener("click", e => {
   target.classList.toggle("active");
   navBar.classList.toggle("menu-active");
 });
+// const hideMenu = () => (document.querySelector(".menu-active").display = none);
+const hideMenu = document.querySelector(".menu-active");
+hideMenu.addEventListener("click", () => {
+  hideMenu.display = none;
+});

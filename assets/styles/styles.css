@@ -20,6 +20,8 @@
 }
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--scroll-padding-top, 10rem);
 }
 body {
     font-size: 1.6rem;
@@ -30,6 +32,7 @@ img {
 }
 p {
     font-size: 1.6rem;
+    text-align: left;
 }
 h1 {
     font-size: 5rem;
@@ -40,6 +43,15 @@ h2 {
 h4 {
     font-size: 1.4rem;
 }
+h3 {
+    font-size: 1.6rem;
+}
+h2, h3{
+    text-align: center;
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+}
+
 .container {
     width: min(90%, 120rem);
     margin: 0 auto;
@@ -48,10 +60,6 @@ h4 {
     font-size: 2.4rem;
 }
 .nav-bar {
-    /* display: flex;
-    justify-content: center;
-    width: 100%;
-    position: absolute; */
     background-color: var(--crema);
     position: fixed;
     top: 0;
@@ -63,7 +71,7 @@ h4 {
     position: fixed;
     width: 100%;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
     justify-content: center;
     display: none;
@@ -75,8 +83,23 @@ h4 {
 }
 .nav-bar-items.menu-active {
     display: flex;
-    height: 100vh;
+    height: 50vh;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
     animation: muestraMenu 200ms ease-in-out both;
+}
+@media (min-width: 1200px) {
+    .box {
+        display: none;
+    }
+    .nav-bar .nav-bar-items {
+        display: flex;
+        justify-content: flex-end;
+        opacity: 1;
+        flex-direction: row;
+        height: 10rem;
+        background-color: var(--blanco);
+    }
 }
 .nav-bar-items .nav-bar-item {
     margin: 1rem 0;
@@ -86,6 +109,13 @@ h4 {
     font-size: 2rem;
     font-weight: 700;
     padding: 1rem 2rem;
+}
+@media (min-width: 1200px) {
+    .nav-bar-items .nav-bar-item .nav-bar-item-link {
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: var(--gris)
+    }
 }
 .nav-bar-items .nav-bar-item .nav-bar-item-link:hover {
     transition: all 0.3s ease-in-out;
@@ -146,6 +176,13 @@ h4 {
     position: relative;
     z-index: -1;
 }
+@media (min-width: 1200px) {
+    .container-first {
+    }
+    .mi-foto {
+        width: 40rem;
+    }
+}
 .iconos-container {
     display: flex;
     bottom: -4rem;
@@ -164,6 +201,11 @@ h4 {
 }
 .icono {
     filter: invert(97%) sepia(100%) saturate(4985%) hue-rotate(181deg) brightness(109%) contrast(108%);
+    width: 2.4rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .btn-primary {
     width: 100%;
@@ -187,16 +229,7 @@ h4 {
     padding: 0 0 1rem;
     margin-bottom: 2rem;
 }
-section h2, h3{
-    text-align: center;
-    padding-bottom: 2rem;
-}
-section p {
-    text-align: left;
-}
-section h3 {
-    font-size: 1.6rem;
-}
+
 /*Habilities*/
 .habilities {
     margin: 4rem 0;
@@ -207,9 +240,6 @@ section h3 {
 .habilities-item {
     min-width: 20rem;
     min-height: 20rem;
-    
-}
-.habilities-item {
     background-color: var(--light-purpura);
     margin: .5rem .5rem;
 }
@@ -236,6 +266,21 @@ section h3 {
 .icono-habilities-container {
     padding: 1rem 0 0 1rem;
 }
+@media (min-width: 1200px) {
+    .habilities-item-content-text > h3 {
+        font-size: 1.6rem;
+        padding: 2rem 1rem 4rem;
+    
+    }
+    .habilities-items {
+        margin: 0 auto;
+        overflow-x: hidden;
+        max-width: 80rem;
+    }
+    .habilities-item {
+        height: 25rem;
+    }
+}
 /*Experiences*/
 .experience-container {
     display: flex;
@@ -243,7 +288,12 @@ section h3 {
     align-items: center;
     
 }
-
+#experience {
+    margin-top: 1rem;
+}
+#experience>.experience-title {
+    padding: 1rem 0;
+}
 .experience-icono {
     position:relative;
     z-index: -1;
@@ -255,12 +305,20 @@ section h3 {
 .experience-icono-container {
     width: 8rem;
 }
+@media (min-width: 1200px) {
+    .experience-container {
+        align-items: center;
+        width: 80rem;
+        margin: 0 auto;
+        justify-content: center;
+    }
+    .experience {
+        display: flex;
+    }
+}
 /*Portafolio*/
 .portafolio {
     margin: 2rem 0;
-}
-.portafolio-title {
-    padding: 3rem 0;
 }
 div.experience-text p {
     font-size: 1.4rem;
@@ -311,7 +369,7 @@ div.experience-text p {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 5rem;
+    width: 4rem;
 }
 section > span > img {
     width: 2.4rem;

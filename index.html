@@ -19,12 +19,12 @@
 
         <nav class="nav-bar">
             <ul class="nav-bar-items">
-                <li class="nav-bar-item"><a class="nav-bar-item-link" href="#">Home</a></li>
-                <li class="nav-bar-item"><a class="nav-bar-item-link" href="#">Acerca de mi</a></li>
-                <li class="nav-bar-item"><a class="nav-bar-item-link" href="#">Mis habilidades</a></li>
-                <li class="nav-bar-item"><a class="nav-bar-item-link" href="#">Experiencia</a></li>
-                <li class="nav-bar-item"><a class="nav-bar-item-link" href="#">Portafolio</a></li>
-                <li class="nav-bar-item"><a class="nav-bar-item-link" href="#">Contacto</a></li>
+                <li class="nav-bar-item"><a class="nav-bar-item-link" href="#home">Home</a></li>
+                <li class="nav-bar-item"><a class="nav-bar-item-link" href="#about-me">Acerca de mi</a></li>
+                <li class="nav-bar-item"><a class="nav-bar-item-link" href="#skills">Mis habilidades</a></li>
+                <li class="nav-bar-item"><a class="nav-bar-item-link" href="#experience">Experiencia</a></li>
+                <li class="nav-bar-item"><a class="nav-bar-item-link" href="#portafolio">Portafolio</a></li>
+                <li class="nav-bar-item"><a class="nav-bar-item-link" href="#contact">Contacto</a></li>
             </ul>
         </nav>
         <div class="box">
@@ -37,8 +37,8 @@
     </header>
 
     <main>
-        <div class="container">
-            <section class="presentation">
+        <div class="container container-first">
+            <section id="home" class="presentation">
                 <h1 class="main-title">Software Developer</h1>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit iusto impedit vero!</p>
             </section>
@@ -58,19 +58,18 @@
                         <img class="icono" src="./assets/iconos/ant-design_twitter-outlined.svg" alt="Icono de twitter">
                     </div>
                 </article>
-
             </section>
             <div class="btn-container">
                 <button class="btn btn-primary">Contáctame</button>
             </div>
-            <section class="aboutMe-container">
+            <section id="about-me" class="aboutMe-container">
                 <h2>Acerca de mi</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, tempore? Iste voluptate voluptatem
                     perspiciatis magnam nostrum voluptatum dolorem qui nam sint quo cumque dolore, numquam, commodi, eos
                     aliquam ratione laborum?</p>
             </section>
         </div>
-        <section class="habilities">
+        <section id="skills" class="habilities">
             <article class="habilities-title">
                 <h2>Mis habilidades</h2>
             </article>
@@ -117,9 +116,9 @@
         </section>
 
         <div class="container">
-            <section>
+            <section id="experience">
                 <article>
-                    <h2>
+                    <h2 class="experience-title">
                         Experiencia
                     </h2>
                 </article>
@@ -156,16 +155,16 @@
                             alt="Icono de Google">
                     </div>
                     <div class="experience-text">
-                        <h3>Spotify</h3>
+                        <h3>Google</h3>
                         <p>Web Developer</p>
-                        <p>2017-2019</p>
+                        <p>2019-2020</p>
                     </div>
                     <div class="years-experience-container">
                         <h3>2 años</h3>
                     </div>
                 </article>
             </section>
-            <section class="portafolio">
+            <section id="portafolio" class="portafolio">
                 <article class="portafolio-title">
                     <h2>Portafolio</h2>
                 </article>
@@ -177,7 +176,7 @@
                 <div><img src="./assets/images/image 3.jpg" alt=""></div>
             </section>
             <footer>
-                <section>
+                <section id="contact">
                     <article>
                         <h2 class="contact-title">Contácto</h2>
                     </article>
