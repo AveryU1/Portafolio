@@ -8,7 +8,7 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/styles.css">
     <!-- <link rel="stylesheet" href="./assets/styles/normalize.css"> -->
     <title>Document</title>
@@ -16,7 +16,6 @@
 
 <body>
     <header>
-
         <nav class="nav-bar">
             <ul class="nav-bar-items">
                 <li class="nav-bar-item"><a class="nav-bar-item-link" href="#home">Home</a></li>
@@ -33,20 +32,20 @@
                 <i class='bx bx-x closed'></i>
             </div>
         </div>
-
     </header>
 
     <main>
         <div class="container container-first">
             <section id="home" class="presentation">
-                <h1 class="main-title">Software Developer</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit iusto impedit vero!</p>
+                <h1 class="main-title">Software <br> Developer</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit iusto impedit vero! Lorem, ipsum dolor sit
+                    amet consectetur adipisicing elit. Modi, ea?</p>
             </section>
             <section class="container-icono-foto">
                 <div class="mi-foto">
                     <img src="./assets/images/img-removebg-preview 2.png" alt="Foto del desarrollador">
                 </div>
-                <article class="iconos-container">
+                <article class="iconos-container-items">
                     <div class="icono-items">
                         <img class="icono" src="./assets/iconos/cib_linkedin-in.svg" alt="Icono de linkedin">
                     </div>
@@ -59,16 +58,19 @@
                     </div>
                 </article>
             </section>
+            <section class="iconos-container">
+            </section>
             <div class="btn-container">
                 <button class="btn btn-primary">Contáctame</button>
             </div>
-            <section id="about-me" class="aboutMe-container">
-                <h2>Acerca de mi</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, tempore? Iste voluptate voluptatem
-                    perspiciatis magnam nostrum voluptatum dolorem qui nam sint quo cumque dolore, numquam, commodi, eos
-                    aliquam ratione laborum?</p>
-            </section>
         </div>
+
+        <section id="about-me" class="aboutMe-container container">
+            <h2>Acerca de mi</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, tempore? Iste voluptate voluptatem
+                perspiciatis magnam nostrum voluptatum dolorem qui nam sint quo cumque dolore, numquam, commodi, eos
+                aliquam ratione laborum?</p>
+        </section>
         <section id="skills" class="habilities">
             <article class="habilities-title">
                 <h2>Mis habilidades</h2>
@@ -110,7 +112,6 @@
                                 necessitatibus</p>
                         </div>
                     </div>
-
                 </div>
             </article>
         </section>
@@ -122,59 +123,64 @@
                         Experiencia
                     </h2>
                 </article>
-                <article class="experience-container">
-                    <div class="experience-icono-container icono-amazon">
-                        <img class="experience-icono" src="./assets/iconos/ant-design_amazon-outlined.svg"
-                            alt="Icono de Amazon">
-                    </div>
-                    <div class="experience-text">
-                        <h3>Amazon</h3>
-                        <p>Web Developer</p>
-                        <p>2015-2017</p>
-                    </div>
-                    <div class="years-experience-container">
-                        <h3>2 años</h3>
-                    </div>
-                </article>
-                <article class="experience-container">
-                    <div class="experience-icono-container">
-                        <img class="experience-icono" src="./assets/iconos/bi_spotify.svg" alt="Icono de spotify">
-                    </div>
-                    <div class="experience-text">
-                        <h3>Spotify</h3>
-                        <p>Web Developer</p>
-                        <p>2017-2019</p>
-                    </div>
-                    <div class="years-experience-container">
-                        <h3>2 años</h3>
-                    </div>
-                </article>
-                <article class="experience-container">
-                    <div class="experience-icono-container">
-                        <img class="experience-icono" src="./assets/iconos/akar-icons_google-fill.svg"
-                            alt="Icono de Google">
-                    </div>
-                    <div class="experience-text">
-                        <h3>Google</h3>
-                        <p>Web Developer</p>
-                        <p>2019-2020</p>
-                    </div>
-                    <div class="years-experience-container">
-                        <h3>2 años</h3>
-                    </div>
-                </article>
+                <div class="experience-container-desktop">
+                    <article class="experience-container">
+                        <div class="experience-icono-container icono-amazon">
+                            <img class="experience-icono" src="./assets/iconos/ant-design_amazon-outlined.svg"
+                                alt="Icono de Amazon">
+                        </div>
+                        <div class="experience-text">
+                            <h3>Amazon</h3>
+                            <p>Web Developer</p>
+                            <p>2015-2017</p>
+                        </div>
+                        <div class="years-experience-container">
+                            <h3>2 años</h3>
+                        </div>
+                    </article>
+                    <article class="experience-container">
+                        <div class="experience-icono-container">
+                            <img class="experience-icono" src="./assets/iconos/bi_spotify.svg" alt="Icono de spotify">
+                        </div>
+                        <div class="experience-text">
+                            <h3>Spotify</h3>
+                            <p>Web Developer</p>
+                            <p>2017-2019</p>
+                        </div>
+                        <div class="years-experience-container">
+                            <h3>2 años</h3>
+                        </div>
+                    </article>
+                    <article class="experience-container">
+                        <div class="experience-icono-container">
+                            <img class="experience-icono" src="./assets/iconos/akar-icons_google-fill.svg"
+                                alt="Icono de Google">
+                        </div>
+                        <div class="experience-text">
+                            <h3>Google</h3>
+                            <p>Web Developer</p>
+                            <p>2019-2020</p>
+                        </div>
+                        <div class="years-experience-container">
+                            <h3>2 años</h3>
+                        </div>
+                    </article>
+                </div>
             </section>
             <section id="portafolio" class="portafolio">
                 <article class="portafolio-title">
                     <h2>Portafolio</h2>
                 </article>
-                <div><img src="./assets/images/Rectangle 59.jpg" alt=""></div>
-                <div class="container-rectangle">
-                    <div><img src="./assets/images/Rectangle 48.jpg" alt=""></div>
-                    <div class="portafolio-rectangle-2"><img src="./assets/images/Rectangle 49.jpg" alt=""></div>
+                <div class="portafolio-container">
+                    <div><img src="./assets/images/Rectangle 59.jpg" alt=""></div>
+                    <div class="container-rectangle">
+                        <div><img src="./assets/images/Rectangle 48.jpg" alt=""></div>
+                        <div class="portafolio-rectangle-2"><img src="./assets/images/Rectangle 49.jpg" alt=""></div>
+                    </div>
+                    <div><img src="./assets/images/image 3.jpg" alt=""></div>
                 </div>
-                <div><img src="./assets/images/image 3.jpg" alt=""></div>
             </section>
+
             <footer>
                 <section id="contact">
                     <article>
@@ -203,12 +209,12 @@
                         </article>
                     </div>
                 </section>
-
             </footer>
 
         </div>
 
     </main>
+
     <script src="./assets/scripts/app.js"></script>
 </body>
 
